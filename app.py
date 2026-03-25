@@ -6,10 +6,8 @@ import requests
 import geocoder
 import plotly.express as px
 
-# ---------------- CONFIG ----------------
 st.set_page_config(layout="wide")
 
-# ---------------- THEME ----------------
 theme = st.sidebar.selectbox("Theme", ["Dark", "Light"])
 
 if theme == "Light":
@@ -19,7 +17,6 @@ if theme == "Light":
     </style>
     """, unsafe_allow_html=True)
 
-# ---------------- LANGUAGE ----------------
 lang = st.sidebar.radio("Language", ["English", "Telugu"])
 
 TEXT = {
@@ -34,14 +31,13 @@ TEXT = {
 def t(key):
     return TEXT[key]["en"] if lang == "English" else TEXT[key]["te"]
 
-# ---------------- LOAD DATA ----------------
 @st.cache_data
 def load_data():
     return pd.read_csv("data/cleaned_crop_data.csv")
 
 data = load_data()
 
-# ---------------- LOCATION ----------------
+
 def get_location():
     try:
         g = geocoder.ip('me')
@@ -49,7 +45,6 @@ def get_location():
     except:
         return "India", [22.5937, 78.9629]
 
-# ---------------- WEATHER ----------------
 def get_weather(city):
     api_key = "e5c6719be1fd15ba3eea045ebe0357b0"
     try:
@@ -61,7 +56,6 @@ def get_weather(city):
     except:
         return None, None
 
-# ---------------- SEASON DATA ----------------
 def season_data(season):
     if season == "Kharif":
         return {"N": 80, "P": 40, "K": 40, "Temp": "25-35°C", "Rainfall": "200-300 mm"}
@@ -70,15 +64,13 @@ def season_data(season):
     else:
         return {"N": 50, "P": 25, "K": 25, "Temp": "20-30°C", "Rainfall": "100-200 mm"}
 
-# ---------------- NAVIGATION ----------------
+
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Home", "Prediction", "Dashboard", "Contact"])
 
-# ---------------- HOME ----------------
 if page == "Home":
     st.title(t("title"))
 
-# ---------------- WELCOME SCROLL ----------------
     st.markdown("""
     <div style="
         background-color:#2c7a7b;
@@ -110,7 +102,6 @@ if page == "Home":
         st.write("🌡 Temp:", temp, "°C")
         st.write("💧 Humidity:", hum, "%")
 
-    # INDIA MAP (FIXED)
     st.subheader("India Map")
 
     map_data = pd.DataFrame({
@@ -137,7 +128,7 @@ if page == "Home":
 
     with col2:
         st.plotly_chart(fig)
-# ---------------- PREDICTION ----------------
+
 elif page == "Prediction":
     st.title(t("prediction"))
 
@@ -151,7 +142,6 @@ elif page == "Prediction":
     st.write("Temperature:", values["Temp"])
     st.write("Rainfall:", values["Rainfall"])
 
-# ---------------- DASHBOARD ----------------
 elif page == "Dashboard":
     st.title(t("dashboard"))
 
@@ -199,7 +189,6 @@ elif page == "Dashboard":
         sns.heatmap(data.select_dtypes(include=['int64','float64']).corr(), annot=True, ax=ax)
         st.pyplot(fig)
 
-# ---------------- CONTACT ----------------
 elif page == "Contact":
     st.title(t("contact"))
 
