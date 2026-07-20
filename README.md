@@ -42,6 +42,7 @@ The objective is to analyze crop requirements, generate business insights, and r
 
 --> Project Structure
 
+```
 ├── data/
 │   ├── crop_data.csv
 │   └── cleaned_crop_data.csv
@@ -53,7 +54,7 @@ The objective is to analyze crop requirements, generate business insights, and r
 ├── app.py
 ├── requirements.txt
 └── README.md
-
+```
 --> Data Cleaning
 
 The dataset was cleaned using Pandas by:
