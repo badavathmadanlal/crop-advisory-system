@@ -1,4 +1,4 @@
-Crop Advisory Analytics Dashboard
+**Crop Advisory Analytics Dashboard**
 
 A Data Analytics project that analyzes crop, soil, and climate data to help identify suitable crops based on environmental conditions. The project includes data cleaning, exploratory data analysis (EDA), interactive Power BI dashboards, and a simple crop recommendation system built using Python.
 
