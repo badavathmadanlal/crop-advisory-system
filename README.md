@@ -144,7 +144,7 @@ The project combines **Python**, **Pandas**, **Exploratory Data Analysis (EDA)**
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 DEVELOPER
 
 <div align="center">
 
