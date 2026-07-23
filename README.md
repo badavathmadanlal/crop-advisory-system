@@ -1,136 +1,172 @@
-**Crop Advisory Analytics Dashboard**
+# 🌾 Crop Advisory Analytics Dashboard
 
-A Data Analytics project that analyzes crop, soil, and climate data to help identify suitable crops based on environmental conditions. The project includes data cleaning, exploratory data analysis (EDA), interactive Power BI dashboards, and a simple crop recommendation system built using Python.
+> Smart Agriculture using Data Analytics, Python & Power BI
+> 
 
---> Project Overview
-This project uses agricultural data containing:
+<img src="https://readme-typing-svg.herokuapp.com/?lines=Crop+Advisory+Analytics+Dashboard;Smart+Agriculture;Power+BI+Dashboard;Python+Project">
 
-- Nitrogen (N)
-- Phosphorus (P)
-- Potassium (K)
-- Temperature
-- Humidity
-- Soil pH
-- Rainfall
-- Crop Label
 
-The objective is to analyze crop requirements, generate business insights, and recommend suitable crops based on soil and weather conditions.
+# 📖 Overview
 
--->Dashboard Preview
-  [Dashboard](dashboard.png)
+Crop Advisory Analytics Dashboard is a data analytics project that analyzes soil nutrients, environmental conditions, and weather data to recommend the most suitable crops for cultivation.
 
---> Features
+The project combines **Python**, **Pandas**, **Exploratory Data Analysis (EDA)**, and **Power BI** to transform raw agricultural data into meaningful insights through interactive dashboards and a crop recommendation system.
 
-- Data Cleaning using Pandas
-- Exploratory Data Analysis (EDA)
-- Interactive Power BI Dashboard
-- Soil pH Analysis
-- Rainfall Analysis
-- NPK Comparison
-- Crop Distribution Analysis
-- Crop Recommendation based on user inputs
+---
 
---> Tech Stack
+# 🎯 Project Objectives
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Power BI
-- Google Colab
+- Analyze agricultural data efficiently.
+- Study soil nutrient distribution (NPK).
+- Understand rainfall and temperature patterns.
+- Identify crop-wise environmental requirements.
+- Build interactive Power BI dashboards.
+- Recommend suitable crops based on user inputs.
 
---> Project Structure
+---
+
+# 🏗 Project Architecture
 
 ```
-├── data/
+                    🌦 Environmental Data
+          ┌─────────────────────────────────┐
+          │ Temperature • Rainfall • Humidity │
+          └─────────────────────────────────┘
+                        │
+                        ▼
+              🌱 Agricultural Dataset
+                        │
+        ┌───────────────┼───────────────┐
+        ▼               ▼               ▼
+   🧹 Cleaning      📊 EDA         📈 Analysis
+        └───────────────┬───────────────┘
+                        ▼
+              📊 Power BI Dashboard
+                        │
+                        ▼
+         🌾 Crop Recommendation Engine
+                        │
+                        ▼
+              🌽 Recommended Crop
+```
+
+---
+
+# ✨ Features
+
+| Module | Description |
+|---------|-------------|
+| 🧹 Data Cleaning | Removed missing values, duplicates, and standardized columns |
+| 📊 EDA | Distribution analysis, correlation analysis, and statistical summaries |
+| 📈 Dashboard | Interactive Power BI dashboard with filters |
+| 🌾 Crop Recommendation | Predicts suitable crops using environmental parameters |
+| 🌦 Climate Analysis | Rainfall, humidity, and temperature analysis |
+| 🧪 Soil Analysis | NPK nutrients and soil pH visualization |
+
+---
+
+# 📊 Key Performance Indicators (KPIs)
+
+| 📈 Metric | 📌 Value |
+|:----------|:--------:|
+| 🌡 Average Temperature | **25.62 °C** |
+| 🌧 Average Rainfall | **103.46 mm** |
+| 🧪 Average Soil pH | **6.47** |
+| 🌱 Crop Categories | **22** |
+| 📦 Total Records | **2,200** |
+
+---
+
+# 🛠 Technology Stack
+
+| 💻 Technology | 🚀 Purpose |
+|---------------|------------|
+| 🐍 Python | Data Processing & Crop Recommendation |
+| 🐼 Pandas | Data Cleaning & Manipulation |
+| 🔢 NumPy | Numerical Computing |
+| 📊 Matplotlib | Data Visualization |
+| 📈 Seaborn | Statistical Visualization |
+| 📉 Power BI | Interactive Dashboard & Reporting |
+| ☁️ Google Colab | Development Environment |
+
+---
+
+# ✨ Features
+
+- ✅ Data Cleaning using **Pandas**
+- ✅ Exploratory Data Analysis (EDA)
+- ✅ Interactive **Power BI Dashboard**
+- ✅ Climate Analysis (Temperature, Rainfall & Humidity)
+- ✅ Soil Nutrient (NPK) Analysis
+- ✅ Soil pH Analysis
+- ✅ Crop Distribution Analysis
+- ✅ Crop Recommendation System
+- ✅ Business Insights & KPI Analysis
+
+---
+
+# 📂 Project Structure
+
+```text
+📦 Crop-Advisory-Analytics
+│
+├── 📁 data
 │   ├── crop_data.csv
 │   └── cleaned_crop_data.csv
 │
-├── Notebook/
+├── 📁 notebook
 │   └── projAgri.ipynb
 │
-├── dashboard.png
-├── app.py
-├── requirements.txt
-└── README.md
-```
---> Data Cleaning
-
-The dataset was cleaned using Pandas by:
-- Checking missing values
-- Removing duplicate records
-- Standardizing column names
-- Exporting cleaned dataset for analysis
-
---> Exploratory Data Analysis
-
-Performed analysis on:
-
-- Crop Distribution
-- Rainfall vs Temperature
-- NPK Distribution
-- Soil pH Distribution
-- Correlation Heatmap
-
---> Power BI Dashboard
-
-The dashboard provides:
-
-- Average Temperature
-- Average Rainfall
-- Average Soil pH
-- Crop Distribution
-- Temperature Requirement by Crop
-- Rainfall Requirement by Crop
-- Soil pH Distribution
-- NPK Comparison Across Crops
-
-Interactive Filters:
-
-- Crop Type
-- Rainfall Range
-- Temperature Range
-
---> Crop Recommendation Logic
-
-A simple recommendation function filters crops based on:
-
-- Nitrogen (N)
-- Phosphorus (P)
-- Potassium (K)
-- Temperature
-- Humidity
-- Soil pH
-- Rainfall
-
-It returns the most suitable crop using the mode of matching records.
-
-Example:
-
-```python
-recommend_crop(90,40,40,25,80,6.5,200)
-
-Output:
-jute
+├── 📁 dashboard
+│   ├── Crop Dashboard.pbix
+│   └── dashboard.png
+│
+├── 📁 recommendation
+│   └── app.py
+│
+├── 📄 requirements.txt
+├── 📄 LICENSE
+└── 📄 README.md
 ```
 
---> Key Insights
+---
 
-- Average Temperature: **25.62°C**
-- Average Rainfall: **103.46 mm**
-- Average Soil pH: **6.47**
-- Dataset contains **2200 agricultural records**
-- Dashboard supports interactive filtering for better analysis
+# 📈 Project Statistics
 
---> Dataset
+| 📊 Statistic | 📌 Value |
+|--------------|:--------:|
+| 📦 Dataset Records | **2,200+** |
+| 🌾 Crop Categories | **22** |
+| 🌱 Environmental Features | **7** |
+| 📊 Interactive Dashboard | **Power BI** |
+| 🐍 Programming Language | **Python** |
+| 📈 Data Analysis | **Pandas, NumPy** |
 
-Source:
-Agricultural Crop Recommendation Dataset (Kaggle)
+---
 
---> __Author__
+# 👨‍💻 Author
 
-*Badavath Madanlal*
+<div align="center">
 
-- GitHub: https://github.com/badavathmadanlal
-- LinkedIn: linkedin.com/in/badavathmadanlal
+## 🌾 Crop Advisory Analytics Dashboard
+
+**Developed by Badavath Madanlal**
+
+🎓 **B.Tech in Computer Science & Engineering**  
+🏛 **National Institute of Technology Silchar**
+
+<p align="center">
+<a href="https://github.com/badavathmadanlal">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github">
+</a>
+
+<a href="https://linkedin.com/in/badavathmadanlal">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin">
+</a>
+</p>
+
+⭐ **If you found this project helpful, please consider giving it a Star!**
+
+</div>
+
+---
