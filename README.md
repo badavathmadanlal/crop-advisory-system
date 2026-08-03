@@ -1,4 +1,4 @@
-# 🌾 Crop Advisory Analytics Dashboard
+# 🌾 Crop Advisory Analytics Dashboard.
 
 > Smart Agriculture using Data Analytics, Python & Power BI
 > 
