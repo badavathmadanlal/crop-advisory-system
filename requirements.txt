@@ -7,36 +7,4 @@ geocoder
 plotly
 
 
--lopengl32 -lglu32 -lfreeglut
-
-
-
-
-IMPORTANT:
-
-Do not explain.
-
-Do not describe architecture.
-
-Do not give tutorials.
-
-Actually create, modify, and save the files inside the project.
-
-Whenever a file is needed, create it.
-
-Whenever code is needed, write the complete implementation.
-
-Run necessary terminal commands.
-
-Install dependencies automatically.
-
-If a package is missing, install it.
-
-After completing the implementation, verify there are no errors.
-
-If there are errors, fix them before stopping.
-
-Do not stop until the requested feature is fully working.
-
-After completion, summarize which files were created or modified.
 
